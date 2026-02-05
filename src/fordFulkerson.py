@@ -53,8 +53,30 @@ def fordFulkerson(g, sName, tName):
     # Récupérer tous les arcs du graphe 
     arcs = g.getArcs()
 
-    # Ajouter votre code ici
-    # ...
+    sommet_actuel = s
+
+    poi_du_chemin = 
+    while (marque == True & destination != t):
+        mark = [0] * g.n
+        marque = False
+        destinations = flow.adjacency[sommet_actuel]
+        for destination in destinations:
+            if flow.adjacency[sommet_actuel][destination] < g.adjacency[sommet_actuel, destination]:
+                mark[destination] = sommet_actuel
+                marque = True
+                poi_du_chemin = min()
+                sommet_actuel = destination
+                break
+        if (not(marque)):
+            for destination in destinations:
+                if (flow.adjacency[sommet_actuel][destination] > g.adjacency[sommet_actuel, destination]):
+                    mark[destination] = (-1)*sommet_actuel
+                    marque = True
+                    sommet_actuel = destination
+                    break
+        if (destination == t):
+            for i,j in enumerate(mark):
+                flow.adjacency[i,abs(j)] += 
     
     return flow
    
